@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt("Nhap vao 1 so bat ky : ");
+if (isPrime(num))alert("Do la so nguyen to");
+else alert("Do khong phai so nguyen to");
+    function isPrime(intNumber) {
+        if (intNumber < 2 || intNumber % 1 !== 0) return false;
+        else if (intNumber == 2 || intNumber == 3||intNumber==5||intNumber==7) return true;
+        else {
+            if (intNumber % 2 == 0) return false;
+            for (let i = 3; i <= Math.sqrt(intNumber); i++) {
+                if (intNumber % i !== 0) return true;
+            }
+        }
+    }
+</script>
+</body>
+</html>
